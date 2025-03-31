@@ -55,37 +55,7 @@ async def handle_question(question: str, file: UploadFile = None):
         conn.close()
         return {"answer": str(total_sales)}
 
-    # Markdown documentation generation
-    if "Write documentation in Markdown" in question:
-        markdown_text = """
-# Weekly Step Analysis
-
-## Introduction
-This report provides an **analysis** of the number of steps walked each day over the past week. The data is compared over time and against the steps taken by friends.
-
-## Results
-
-| Day | Steps | Friend's Steps |
-|-----|------|---------------|
-| Monday | 8500 | 7800 |
-| Tuesday | 9200 | 8300 |
-| Wednesday | 7600 | 8100 |
-| Thursday | 10000 | 9500 |
-| Friday | 11500 | 10200 |
-| Saturday | 12300 | 11000 |
-| Sunday | 9800 | 9000 |
-
-## Code Example
-```python
-import pandas as pd
-df = pd.DataFrame({"Day": ["Monday", "Tuesday"], "Steps": [8500, 9200]})
-print(df)
-
-return {"answer": markdown_text}
-"""
-bash
-Copy
-Edit
+   
 # Default response
 return {"answer": "Sorry, I couldn't process your question."}
 if __name__ == "__main__":
