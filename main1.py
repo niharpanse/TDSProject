@@ -80,9 +80,9 @@ This report provides an **analysis** of the number of steps walked each day over
 import pandas as pd
 df = pd.DataFrame({"Day": ["Monday", "Tuesday"], "Steps": [8500, 9200]})
 print(df)
-"""
-return {"answer": markdown_text}
 
+return {"answer": markdown_text}
+"""
 bash
 Copy
 Edit
