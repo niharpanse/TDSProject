@@ -5,6 +5,7 @@ import zipfile
 import os
 import datetime
 import hashlib
+import uvicorn
 from fastapi import FastAPI, UploadFile, File
 
 app = FastAPI()
@@ -57,8 +58,6 @@ async def handle_question(question: str, file: UploadFile = None):
 
    
 # Default response
-return {"answer": "Sorry, I couldn't process your question."}
-if __name__ == "__main__":
-    import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
 
