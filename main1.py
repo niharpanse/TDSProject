@@ -57,7 +57,7 @@ async def handle_question(question: str, file: UploadFile = None):
 
     # Markdown documentation generation
     if "Write documentation in Markdown" in question:
-        markdown_text = """\
+        markdown_text = """
 # Weekly Step Analysis
 
 ## Introduction
@@ -80,7 +80,7 @@ This report provides an **analysis** of the number of steps walked each day over
 import pandas as pd
 df = pd.DataFrame({"Day": ["Monday", "Tuesday"], "Steps": [8500, 9200]})
 print(df)
-```
+"""
 return {"answer": markdown_text}
 
 bash
